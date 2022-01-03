@@ -14,6 +14,7 @@
 
 package com.liferay.commerce.checkout.web.internal.util;
 
+import com.liferay.account.exception.AccountEntryEmailAddressException;
 import com.liferay.commerce.account.service.CommerceAccountLocalService;
 import com.liferay.commerce.checkout.helper.CommerceCheckoutStepHttpHelper;
 import com.liferay.commerce.checkout.web.internal.display.context.ShippingAddressCheckoutStepDisplayContext;
@@ -107,6 +108,7 @@ public class ShippingAddressCommerceCheckoutStep
 				exception instanceof CommerceAddressNameException ||
 				exception instanceof CommerceAddressStreetException ||
 				exception instanceof CommerceAddressZipException ||
+				exception instanceof AccountEntryEmailAddressException ||
 				exception instanceof CommerceOrderBillingAddressException ||
 				exception instanceof CommerceOrderShippingAddressException) {
 
